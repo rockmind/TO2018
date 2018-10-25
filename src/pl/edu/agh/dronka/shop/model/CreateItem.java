@@ -5,19 +5,19 @@ public class CreateItem {
 		Item item;
 		switch (category) {
 		case ELECTRONICS:
-			item = (ItemElectronics) new ItemElectronics();
+			item = (ItemElectronics) new ItemElectronics(category);
 			break;
 		case BOOKS:
-			item = (ItemBook) new ItemBook();
+			item = (ItemBook) new ItemBook(category);
 			break;
 		case FOOD:
-			item = (ItemFood) new ItemFood();
+			item = (ItemFood) new ItemFood(category);
 			break;
 		case MUSIC:
-			item = (ItemMusic) new ItemMusic();
+			item = (ItemMusic) new ItemMusic(category);
 			break;
 		case SPORT:
-			item = (ItemSport) new ItemSport();
+			item = (ItemSport) new ItemSport(category);
 			break;
 		default:
 			item = new ItemDefault();

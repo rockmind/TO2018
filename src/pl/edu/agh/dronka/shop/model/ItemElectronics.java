@@ -37,6 +37,10 @@ public class ItemElectronics implements Item {
 		this.quantity = quantity;
 	}
 
+	public ItemElectronics(Category category) {
+		this.category = category;
+	}
+
 	public ItemElectronics() {
 	}
 

@@ -34,6 +34,10 @@ public class ItemMusic implements Item {
 		this.quantity = quantity;
 	}
 
+	public ItemMusic(Category category) {
+		this.category = category;
+	}
+
 	public ItemMusic() {
 	}
 	

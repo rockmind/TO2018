@@ -24,6 +24,10 @@ public class ItemSport implements Item {
 		this.quantity = quantity;
 	}
 
+	public ItemSport(Category category) {
+		this.category = category;
+	}
+
 	public ItemSport() {
 	}
 

@@ -7,6 +7,7 @@ import java.util.Date;
 import java.util.List;
 
 import pl.edu.agh.dronka.shop.model.Category;
+import pl.edu.agh.dronka.shop.model.CreateItem;
 import pl.edu.agh.dronka.shop.model.Index;
 import pl.edu.agh.dronka.shop.model.Item;
 import pl.edu.agh.dronka.shop.model.ItemBook;
@@ -123,7 +124,7 @@ public class ShopProvider {
 					item = (ItemMusic) new ItemMusic(name, category, price, quantity,genre);
 					break;
 				default:
-					item = (ItemDefault) new ItemDefault(name, category, price, quantity);
+					item = CreateItem.createItem(category, name, price, quantity);
 					break;
 				}
 				item.setPolish(isPolish);

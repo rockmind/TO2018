@@ -37,6 +37,10 @@ public class ItemBook implements Item {
 		this.quantity = quantity;
 	}
 
+	public ItemBook(Category category) {
+		this.category = category;
+	}
+
 	public ItemBook() {
 	}
 	

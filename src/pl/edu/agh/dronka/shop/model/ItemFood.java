@@ -35,6 +35,10 @@ public class ItemFood implements Item {
 		this.quantity = quantity;
 	}
 
+	public ItemFood(Category category) {
+		this.category = category;
+	}
+
 	public ItemFood() {
 	}
 

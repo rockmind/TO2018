@@ -28,10 +28,9 @@ public class PropertiesPanel extends JPanel {
 	public void fillProperties() {
 		removeAll();
 
-		filter.getItemSpec().setCategory(shopController.getCurrentCategory());
-		//TUTAJ Zamienić miejscami góra dół
+		//filter.getItemSpec().setCategory(shopController.getCurrentCategory());
+		filter.setItemSpec(shopController.getCurrentCategory());
 		add(createPropertyCheckbox("Tanie bo polskie", new ActionListener() {
-
 			@Override
 			public void actionPerformed(ActionEvent event) {
 				filter.getItemSpec().setPolish(
@@ -41,7 +40,6 @@ public class PropertiesPanel extends JPanel {
 		}));
 
 		add(createPropertyCheckbox("Używany", new ActionListener() {
-
 			@Override
 			public void actionPerformed(ActionEvent event) {
 				filter.getItemSpec().setSecondhand(
@@ -54,7 +52,6 @@ public class PropertiesPanel extends JPanel {
 			add(createPropertyCheckbox("Twarda oprawa", new ActionListener() {
 				@Override
 				public void actionPerformed(ActionEvent event) {
-					filter.setItemSpec(new ItemBook());
 					((ItemBook) filter.getItemSpec()).setHardcover(
 							((JCheckBox) event.getSource()).isSelected());
 					shopController.filterItems(filter);
@@ -65,7 +62,6 @@ public class PropertiesPanel extends JPanel {
 			add(createPropertyCheckbox("Mobilny", new ActionListener() {
 				@Override
 				public void actionPerformed(ActionEvent event) {
-					filter.setItemSpec(new ItemElectronics());
 					((ItemElectronics) filter.getItemSpec()).setMobile(
 							((JCheckBox) event.getSource()).isSelected());
 					shopController.filterItems(filter);
@@ -74,7 +70,6 @@ public class PropertiesPanel extends JPanel {
 			add(createPropertyCheckbox("Gwarancja", new ActionListener() {
 				@Override
 				public void actionPerformed(ActionEvent event) {
-					filter.setItemSpec(new ItemElectronics());
 					((ItemElectronics) filter.getItemSpec()).setWarranty(
 							((JCheckBox) event.getSource()).isSelected());
 					shopController.filterItems(filter);
@@ -82,10 +77,9 @@ public class PropertiesPanel extends JPanel {
 			}));
 			break;
 		case MUSIC:
-			add(createPropertyCheckbox("Gwarancja", new ActionListener() {
+			add(createPropertyCheckbox("Dołączone video", new ActionListener() {
 				@Override
 				public void actionPerformed(ActionEvent event) {
-					filter.setItemSpec(new ItemMusic());
 					((ItemMusic) filter.getItemSpec()).setVideo(
 							((JCheckBox) event.getSource()).isSelected());
 					shopController.filterItems(filter);
